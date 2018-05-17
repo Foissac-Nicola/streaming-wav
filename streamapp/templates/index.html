@@ -1,46 +1,45 @@
 {% extends 'layout.html' %} {% block content %}
 
 <div class="row col-md-12">
-    <p>Bienvenue dans votre application de streaming !</p>
-</div>
-<div class="row col-md-12">
-    <div class="form-group">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Recherchez par mot-clés">
-    </div>
-    <div class="form-group">
-        <label for="genre">Sélectionnez un genre :</label>
-        <select class="form-control" id="genre">
-            {% for genre_label in genre %}
-            <option value="{{ genre_label }}">{{ genre_label }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    <div class="form-group">
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Titres</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Albums</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-        <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">Artistes</button>
-            <input type="checkbox" class="hidden" />
-        </span>
-    </div>
-    <div class="form-group">
-        <button id="search" type="submit" class="btn btn-primary btn-lg btn-block">Rechercher</button>
-    </div>
+    <h2>Bienvenue dans votre application de streaming</h2>
+    <p>Recherchez vos musiques par critère(s) :</p>
 </div>
 
-<script src="{{ url_for('static', filename='js/button_checkbox.js') }}"></script>
+{% include 'search_form.html' %} {% include 'table_musics.html' %}
+
 <script>
     $('#search').click(function () {
-        var searchFilter = {};
-        $.post("/search", searchFilter).done(function(data) {
-            console.log(data);
-            console.log("DONE !");
+        var searchFilters = {
+            "keywords": $("#keywords").val(),
+            "genre": $("#genre").val(),
+            "titre": $("input[type=checkbox][name=titre]").is(":checked"),
+            "album": $("input[type=checkbox][name=album]").is(":checked"),
+            "artiste": $("input[type=checkbox][name=artiste]").is(":checked")
+        };
+        console.log(searchFilters);
+        $.post("/search", searchFilters).done(function (data) {
+            results = data.results;
+
+            $('#searchResults th').remove();
+            $('#resultBody tr').remove();
+
+            if (results.length > 0) {
+                var headers = [{ "title": "", "class": "class='col-md-1'" },
+                { "title": "Titre", "class": "class='col-md-6'" },
+                { "title": "Artiste(s)", "class": "class='col-md-5'" }];
+
+                for (var i in headers) {
+                    $("#resultHead tr").append($("<th " + headers[i].class + ">").text(headers[i].title));
+                }
+
+                var logo = "<img src='{{url_for('static', filename='images/play-button.png')}}' />"
+                $.each(results, function (i, item) {
+                    $('<tr>').append(
+                        $('<td>').prepend(logo),
+                        $('<td>').text(item.titre),
+                        $('<td>').text(item.artiste)).appendTo('#resultBody');
+                });
+            }
         });
     });
 </script> {% endblock %}
