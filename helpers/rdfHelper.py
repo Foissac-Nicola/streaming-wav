@@ -11,10 +11,10 @@ class RDFHelper:
         return rdf.Graph()
 
     @staticmethod
-    def add_sound_note(graph,sound,note=None):
-        if note is not None:
-            node_note = rdf.URIRef(u'urn:/streaming/note')
-            graph.add((sound, node_note, rdf.Literal(note)))
+    def add_sound_rating(graph,sound,rating=None):
+        if rating is not None:
+            node_rating= rdf.URIRef(u'urn:/streaming/rating')
+            graph.add((sound, node_rating, rdf.Literal(rating)))
         return graph
 
     @staticmethod
@@ -87,18 +87,18 @@ class RDFHelper:
         return graph
 
     @staticmethod
-    def add_sound_comment(graph,sound,comment=[]):
-        if len(comment) > 0:
+    def add_sound_comment(graph,sound,description=[]):
+        if len(description) > 0:
             bnode_comments = rdf.BNode()
             node_comment= rdf.URIRef(u'urn:/streaming/comment')
             graph.add((sound, node_comment, bnode_comments))
-            for entry in comment:
+            for entry in description:
                 graph.add((bnode_comments, rdf.RDF.li, rdf.Literal(entry)))
         return graph
 
 
     @staticmethod
-    def add_musique(graph,name,path=None,title=None,author=None,composer=None,genre=None,note=None,date=None,rigth=None,instrument=[],comment=[],subject=[]):
+    def add_sound(graph,name,path=None,title=None,author=None,composer=None,genre=None,rating=None,date=None,rigth=None,instrument=[],description=[],subject=[]):
 
         k = rdf.Namespace(u"urn:/streaming/")
         bnode_sound = rdf.BNode()
@@ -107,12 +107,12 @@ class RDFHelper:
         graph=RDFHelper.add_sound_author(graph,bnode_sound,author=author)
         graph=RDFHelper.add_sound_composer(graph,bnode_sound,composer=composer)
         graph=RDFHelper.add_sound_genre(graph, bnode_sound,genre=genre)
-        graph=RDFHelper.add_sound_note(graph,bnode_sound,note=note)
+        graph=RDFHelper.add_sound_rating(graph,bnode_sound,rating=rating)
         graph=RDFHelper.add_sound_date(graph,bnode_sound,date=date)
         graph=RDFHelper.add_sound_right(graph, bnode_sound,rigth=rigth)
         graph=RDFHelper.add_sound_instrument(graph,bnode_sound,instrument=instrument)
         graph=RDFHelper.add_sound_subject(graph, bnode_sound, subject=subject)
-        graph=RDFHelper.add_sound_comment(graph, bnode_sound, comment=comment)
+        graph=RDFHelper.add_sound_comment(graph, bnode_sound, description=description)
 
 
         graph.bind("strm", k)
@@ -124,9 +124,9 @@ class RDFHelper:
         return graph
 
 a = rdf.Graph()
-
-a = RDFHelper.add_musique(a,"test")
-a = RDFHelper.add_musique(a,"test")
+t = {'instrument': ['bruitages', ' synthèse sonore', ' effets'], 'subject': ['rêve', 'science fiction', 'mystère', 'aquatique', 'espace', 'sound design'], 'description': ['Musique', "d'ambiance", 'utilisant', 'des', 'bruitages', 'naturels', 'traités', 'avec', 'des', 'filtres', 'et', 'des', 'effets', 'audio.', 'Des', 'oscillateurs', 'et', 'des', 'générateurs', "d'harmoniques", 'sont', 'utilisés', 'pour', 'créer', 'une', 'ambiance', 'homogène', 'qui', 'se', 'rapproche', 'du', 'bruit', 'Blanc.', 'Le', 'réalisateur', 'peux', 'mixer', 'plusieurs', 'piste', 'de', 'cette', 'musique', 'pour', 'avoir', 'la', 'durée', 'désirée.', 'Cette', 'musique', 'pourra', 'très', 'bien', 'être', 'utilisée', 'comme', 'ambiance', 'sonore', 'de', 'pièce', "d'exposition,", 'ou', 'comme', 'musique', 'de', 'fond', "d'une", 'application', 'multimédia.\n'], 'title': 'Beta', 'author': 'Hicham Chahidi', 'composer': 'Hicham Chahidi', 'date': '2017-02-20T12:44:22+01:00', 'genre': 'Ambiances', 'rating': '4', 'rigth': 'False'}
+a = RDFHelper.add_sound(a,"test",**t)
+# a = RDFHelper.add_musique(a,"test",comment=['bien','3minute'],genre='electro',instrument=['guitare',"saxo"],author="nfoissac",composer="lfavrelie",note="2",subject=["cool"])
 qres = a.query(
     '''
     PREFIX strm: <urn:/streaming/>
