@@ -15,9 +15,11 @@ class SPARQLHelper:
         print(self.__query)
         qres = self.__graph.query(self.__query)
 
+        ret = []
         if qres is not None:
             for row in qres:
-                print(row)
+                ret.append({'node': str(row['node']), 'title': str(row.title), 'author': str(row.author), 'path': str(row.path), 'genre': str(row.genre)})
+        return ret
 
     def __build_query(self,instrument=[], subject=[],description=[], title=[], author=[], composer=[], genre=[], rating=[], rigth=[]):
         self.__query = '''PREFIX strm: <urn:/streaming/>
@@ -79,8 +81,3 @@ class SPARQLHelper:
         for item in rating :
             self.__query = self.__query + """?rating = '"""+ item + """' || """
 
-
-
-# a = SPARQLHelper("testfile.xml")
-# t = {'genre': [], 'title': ['piano', 'doux'], 'author': [], 'composer': [], 'instrument': [], 'subject': [], 'description': ['piano', 'doux'], 'rating': ['5']}
-# a.exec_query(**t)
