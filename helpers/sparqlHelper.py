@@ -81,6 +81,6 @@ class SPARQLHelper:
 
 
 
-a = SPARQLHelper("testfile.xml")
-t = {'genre': [], 'title': ['piano', 'doux'], 'author': [], 'composer': [], 'instrument': [], 'subject': [], 'description': ['piano', 'doux'], 'rating': ['5']}
-a.exec_query(**t)
+# a = SPARQLHelper("testfile.xml")
+# t = {'genre': [], 'title': ['piano', 'doux'], 'author': [], 'composer': [], 'instrument': [], 'subject': [], 'description': ['piano', 'doux'], 'rating': ['5']}
+# a.exec_query(**t)
