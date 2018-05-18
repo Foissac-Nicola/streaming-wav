@@ -3,8 +3,13 @@ from streamapp import app
 
 @app.route('/search', methods=['POST'])
 def search():
-    search_filters = request.form.to_dict()
-    print(search_filters)
+    search_filters = request.form.to_dict()    
+    keywords = search_filters.pop('keywords', None)
+
+    query = { k:keywords.split() if v == 'true' else [] for (k,v) in search_filters.items() }
+    query['rating'] = [] if search_filters['rating'] == '0' else [search_filters['rating']]
+    
+    # TODO: Envoyer la query au builder
 
     r1 = {'titre': 'What Do You Mean?', 'artiste': 'Justin Bieber '}
     r2 = {'titre': 'Company', 'artiste': 'Justin Bieber '}
@@ -14,9 +19,4 @@ def search():
 @app.route('/')
 @app.route('/index')
 def index():
-    genre = get_genre()
-    return render_template('./index.html', genre=genre)
-
-
-def get_genre():
-    return ["Tout", "Comédie Musicale", "Country", "Dance", "Death Métal", "Disco"]
+    return render_template('./index.html')
