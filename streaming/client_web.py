@@ -5,13 +5,6 @@ import socket, sys
 HOST = '127.0.0.1'
 PORT = 7800
 
-if (len(sys.argv) < 2):
-    print("Not enough arguments! \n *** Usage: {0} <hostname> ***\n".format(sys.argv[0]))
-    sys.exit()
-
-
-
-
 # 1) creation of a socket :
 mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # 2) try to connect to the server:

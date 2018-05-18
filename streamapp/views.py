@@ -17,6 +17,7 @@ def search():
 
     sp = SPARQLHelper("./streamapp/static/media/bdd.xml")
     results = sp.exec_query(**query)
+    
     return jsonify(status=200, results=results)
 
 @app.route('/')
