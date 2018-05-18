@@ -35,7 +35,7 @@ class SPARQLHelper:
          '''
         self.__query = self.__query + '. ?node strm:instrument [?li ?instrument ] .' if len(instrument) > 0 else self.__query + 'OPTIONAL { ?node strm:instrument [?li ?instrument ] }. '
         self.__query = self.__query + '?node strm:rating ?rating' if len(rating) > 0 else self.__query + 'OPTIONAL { ?node strm:rating ?rating } '
-        if len(instrument) > 0 or len(subject) > 0 or len(description) or len(title) > 0 or len(author) > 0 or len(composer) > 0 or len(genre) > 0 or len(rating) :
+        if len(instrument) > 0 or len(subject) > 0 or len(description) > 0 or len(title) > 0 or len(author) > 0 or len(composer) > 0 or len(genre) > 0 or len(rating) :
             self.__query = self.__query + '. filter('
             self.__seek_instrument(instrument=instrument)
             self.__seek_subject(subject=subject)
