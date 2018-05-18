@@ -12,12 +12,11 @@ def search():
     query = { k:keywords.split() if v == 'true' else [] for (k,v) in search_filters.items() }
     query['rating'] = [] if search_filters['rating'] == '0' else [search_filters['rating']]
 
-    sp = SPARQLHelper("./streamapp/static/media/bdd.xml")
-    sp.exec_query(**query)
+    print('-------- QUERY SEND --------')
+    print(query)
 
-    r1 = {'titre': 'What Do You Mean?', 'artiste': 'Justin Bieber '}
-    r2 = {'titre': 'Company', 'artiste': 'Justin Bieber '}
-    results = [r1, r2]
+    sp = SPARQLHelper("./streamapp/static/media/bdd.xml")
+    results = sp.exec_query(**query)
     return jsonify(status=200, results=results)
 
 @app.route('/')

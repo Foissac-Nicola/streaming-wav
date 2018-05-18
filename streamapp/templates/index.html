@@ -28,6 +28,7 @@
             $('#resultBody tr').remove();
 
             if (results.length > 0) {
+                $('#noResult').hide();
                 var headers = [{ "title": "", "class": "class='col-md-1'" },
                 { "title": "Titre", "class": "class='col-md-6'" },
                 { "title": "Artiste(s)", "class": "class='col-md-5'" }];
@@ -40,9 +41,11 @@
                 $.each(results, function (i, item) {
                     $('<tr>').append(
                         $('<td>').prepend(logo),
-                        $('<td>').text(item.titre),
-                        $('<td>').text(item.artiste)).appendTo('#resultBody');
+                        $('<td>').text(item.title),
+                        $('<td>').text(item.author)).appendTo('#resultBody');
                 });
+            } else {
+                $('#noResult').show();
             }
         });
     });
