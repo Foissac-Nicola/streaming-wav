@@ -8,6 +8,12 @@
 {% include 'search_form.html' %} {% include 'table_musics.html' %}
 
 <script>
+    function play(path) {
+        $.post("/play", { 'path': path }).done(function (data) {
+
+        });
+    }
+
     $('#search').click(function () {
         var searchFilters = {
             "keywords": $("#keywords").val(),
@@ -20,7 +26,6 @@
             "description": $("input[type=checkbox][name=description]").is(":checked"),
             "rating": $("#rating").val(),
         };
-        console.log(searchFilters);
         $.post("/search", searchFilters).done(function (data) {
             results = data.results;
 
@@ -37,10 +42,12 @@
                     $("#resultHead tr").append($("<th " + headers[i].class + ">").text(headers[i].title));
                 }
 
-                var logo = "<img src='{{url_for('static', filename='images/play-button.png')}}' />"
                 $.each(results, function (i, item) {
+                    var preLogo = '<a href="#play" onclick="play(\'' + item.path + '\')">';
+                    var logo = "<img src='{{url_for('static', filename='images/play-button.png')}}' />";
+                    var postLogo = "</a>";
                     $('<tr>').append(
-                        $('<td>').prepend(logo),
+                        $('<td>').prepend(preLogo + logo + postLogo),
                         $('<td>').text(item.title),
                         $('<td>').text(item.author)).appendTo('#resultBody');
                 });
