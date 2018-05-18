@@ -16,11 +16,11 @@ except socket.error:
 listen_socket.listen(1)
 
 
-print 'Serving HTTP on port %s ...' % PORT
+print('Serving HTTP on port %s ...' % PORT)
 while True:
     client_connection, client_address = listen_socket.accept()
     request = client_connection.recv(1024)
-    print request
+    print(request)
     valid=False
 
     if ( request.find(" HTTP/") == -1) : #// then this isn't valid HTTP
@@ -49,7 +49,7 @@ while True:
             try:
                 file = open(resource, "r")
             except IOError as e:
-                print "I/O error({0}): {1}".format(e.errno, e.strerror) #file is not found
+                print("I/O error({0}): {1}".format(e.errno, e.strerror)) #file is not found
                 break
             
             print("200 OK \n Opening ressource: {0}\n ".format(resource)) # serve up the file
@@ -61,7 +61,7 @@ while True:
             
             file.close()            
     client_connection.close()
-    ch = raw_input("<S>tart again <F>inish ? ")
+    ch = input("<S>tart again <F>inish ? ")
     if ch.upper() =='F':
         break
         
