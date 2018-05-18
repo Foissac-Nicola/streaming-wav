@@ -43,7 +43,7 @@
                 }
 
                 $.each(results, function (i, item) {
-                    var preLogo = '<a href="#" onclick="play(\'' + item.path + '\')">';
+                    var preLogo = '<a href="#play" onclick="play(\'' + item.path + '\')">';
                     var logo = "<img src='{{url_for('static', filename='images/play-button.png')}}' />";
                     var postLogo = "</a>";
                     $('<tr>').append(
