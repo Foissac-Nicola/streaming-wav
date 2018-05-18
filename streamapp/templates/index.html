@@ -2,7 +2,7 @@
 
 <div class="row col-md-12">
     <h2>Bienvenue dans votre application de streaming</h2>
-    <p>Recherchez vos musiques par critère(s) :</p>
+    <p>Recherchez vos musiques par critères :</p>
 </div>
 
 {% include 'search_form.html' %} {% include 'table_musics.html' %}
@@ -11,10 +11,14 @@
     $('#search').click(function () {
         var searchFilters = {
             "keywords": $("#keywords").val(),
-            "genre": $("#genre").val(),
-            "titre": $("input[type=checkbox][name=titre]").is(":checked"),
-            "album": $("input[type=checkbox][name=album]").is(":checked"),
-            "artiste": $("input[type=checkbox][name=artiste]").is(":checked")
+            "genre": $("input[type=checkbox][name=genre]").is(":checked"),
+            "title": $("input[type=checkbox][name=title]").is(":checked"),
+            "author": $("input[type=checkbox][name=author]").is(":checked"),
+            "composer": $("input[type=checkbox][name=composer]").is(":checked"),
+            "instrument": $("input[type=checkbox][name=instrument]").is(":checked"),
+            "subject": $("input[type=checkbox][name=subject]").is(":checked"),
+            "description": $("input[type=checkbox][name=description]").is(":checked"),
+            "rating": $("#rating").val(),
         };
         console.log(searchFilters);
         $.post("/search", searchFilters).done(function (data) {
