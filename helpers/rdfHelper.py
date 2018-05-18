@@ -113,13 +113,14 @@ class RDFHelper:
         graph=RDFHelper.add_sound_instrument(graph,bnode_sound,instrument=instrument)
         graph=RDFHelper.add_sound_subject(graph, bnode_sound, subject=subject)
         graph=RDFHelper.add_sound_comment(graph, bnode_sound, description=description)
-
-
         graph.bind("strm", k)
-        file = open("testfile.xml", "wb")
 
+    @staticmethod
+    def save_graph(graph,path):
+        k = rdf.Namespace(u"urn:/streaming/")
+        graph.bind("strm", k)
+        file = open(path, "wb")
         file.write(graph.serialize(format='xml'))
-
         file.close()
         return graph
 

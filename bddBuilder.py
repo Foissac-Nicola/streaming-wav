@@ -18,32 +18,15 @@ class BDDBuilder :
 
     @staticmethod
     def make_bdd(path=None):
-        pathDB = os.getcwd() + path
-        Abs_path = os.path.dirname(pathDB)
+        #pathDB = os.getcwd() + path
+        #Abs_path = os.path.dirname(pathDB)
         graphe = rdf.create_rdf()
-        for root, dirs, files in os.walk(Abs_path, topdown=False):
+        for root, dirs, files in os.walk(path, topdown=False):
             for name in files:
                 if name.endswith(".wav"):
                     BDDBuilder.create_entry(graphe,os.path.join(root, name))
-        qres = graphe.query(
-            '''
-            PREFIX strm: <urn:/streaming/>
+        rdf.save_graph(graphe,"./bdd.xml")
 
-            SELECT DISTInct ?x ?z ?k ?w ?t
-            WHERE {
-                ?x strm:instrument [ ?k ?z ].
-                ?x strm:subject [ ?k ?w ].
-                ?x strm:genre ?y .
-                ?x strm:path ?t.
-                ?x strm:rating ?q.
-                filter( ?k = rdf:li && ?z !='alto'^^xsd:string && ?y !='ambiances')
-                
-            } group by ?x
-            ''')
-        if qres is not None:
-            for row in qres:
-                print(row)
-    #
     @staticmethod
     def test(path=None):
         xmp_data = xmp.extract_xmp(path)
@@ -54,4 +37,4 @@ class BDDBuilder :
 
 
 
-BDDBuilder.make_bdd(u"/")
+BDDBuilder.make_bdd(u".")

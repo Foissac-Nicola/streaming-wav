@@ -113,3 +113,5 @@ venv.bak/
 \.idea/misc\.xml
 
 \.idea/
+
+streamapp/static/media/wav/

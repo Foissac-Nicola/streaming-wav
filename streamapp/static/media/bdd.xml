@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:strm="urn:/streaming/"
+>
+  <rdf:Description rdf:nodeID="N2708bf902d4b475ab095b5b234e4d519">
+    <rdf:li>aquatique</rdf:li>
+    <rdf:li>science fiction</rdf:li>
+    <rdf:li>sound design</rdf:li>
+    <rdf:li>rêve</rdf:li>
+    <rdf:li>mystère</rdf:li>
+    <rdf:li>espace</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N058ba867f5ac4a199d8dff603c3c88da">
+    <rdf:li>piano</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N942cc57b661a4f7aab1b277ef2cbf043">
+    <rdf:li>est</rdf:li>
+    <rdf:li>donnant</rdf:li>
+    <rdf:li>joué</rdf:li>
+    <rdf:li>retombe</rdf:li>
+    <rdf:li>doublées</rdf:li>
+    <rdf:li>motif</rdf:li>
+    <rdf:li>vents</rdf:li>
+    <rdf:li>note</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>subitement</rdf:li>
+    <rdf:li>suivis</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>instruments</rdf:li>
+    <rdf:li>alto</rdf:li>
+    <rdf:li>tous</rdf:li>
+    <rdf:li>construite</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>penser</rdf:li>
+    <rdf:li>rejoint</rdf:li>
+    <rdf:li>percussion</rdf:li>
+    <rdf:li>ainsi</rdf:li>
+    <rdf:li>qui</rdf:li>
+    <rdf:li>qu'un</rdf:li>
+    <rdf:li>où</rdf:li>
+    <rdf:li>par</rdf:li>
+    <rdf:li>cette</rdf:li>
+    <rdf:li>bambou</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>jouant</rdf:li>
+    <rdf:li>en</rdf:li>
+    <rdf:li>neige,</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>mystérieux</rdf:li>
+    <rdf:li>musique
+</rdf:li>
+    <rdf:li>cyclique</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>soutenu</rdf:li>
+    <rdf:li>s'égrainent</rdf:li>
+    <rdf:li>bruitages</rdf:li>
+    <rdf:li>à</rdf:li>
+    <rdf:li>série</rdf:li>
+    <rdf:li>bois</rdf:li>
+    <rdf:li>doublé</rdf:li>
+    <rdf:li>participent,</rdf:li>
+    <rdf:li>boite</rdf:li>
+    <rdf:li>tension</rdf:li>
+    <rdf:li>arpège,</rdf:li>
+    <rdf:li>motifs</rdf:li>
+    <rdf:li>tout</rdf:li>
+    <rdf:li>crescendo</rdf:li>
+    <rdf:li>sons</rdf:li>
+    <rdf:li>petites</rdf:li>
+    <rdf:li>partir</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>ambiances</rdf:li>
+    <rdf:li>tempête</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>les</rdf:li>
+    <rdf:li>synthétiseur</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>toujours</rdf:li>
+    <rdf:li>le</rdf:li>
+    <rdf:li>x-files,</rdf:li>
+    <rdf:li>feront</rdf:li>
+    <rdf:li>après</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>côté</rdf:li>
+    <rdf:li>naturels,</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nec08db0b11384a009730842f8b3d65ce">
+    <rdf:li>atmosphère</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>tempo</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>il</rdf:li>
+    <rdf:li>rythmé,</rdf:li>
+    <rdf:li>illustrera</rdf:li>
+    <rdf:li>joie</rdf:li>
+    <rdf:li>l'innocence,</rdf:li>
+    <rdf:li>scènes</rdf:li>
+    <rdf:li>légèreté</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>impression</rdf:li>
+    <rdf:li>vivre
+</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>sur</rdf:li>
+    <rdf:li>enfants,</rdf:li>
+    <rdf:li>joie,</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>positive,</rdf:li>
+    <rdf:li>bonheur</rdf:li>
+    <rdf:li>morceau</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>solo</rdf:li>
+    <rdf:li>donnant</rdf:li>
+    <rdf:li>merveille</rdf:li>
+    <rdf:li>simplicité</rdf:li>
+    <rdf:li>dégageant</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>nature,</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>à</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N20f1730c8f924281bbc3814745e99af0">
+    <rdf:li>nord</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>inspirée</rdf:li>
+    <rdf:li>tuba,</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>violons,</rdf:li>
+    <rdf:li>batterie</rdf:li>
+    <rdf:li>irlandaise</rdf:li>
+    <rdf:li>accordéon,</rdf:li>
+    <rdf:li>altos,</rdf:li>
+    <rdf:li>écossaise</rdf:li>
+    <rdf:li>musiques</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>du</rdf:li>
+    <rdf:li>folk</rdf:li>
+    <rdf:li>folkloriques</rdf:li>
+    <rdf:li>contrebasse</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>l'europe,</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf142a756565c40138f570672752c3423">
+    <strm:rigth>false</strm:rigth>
+    <strm:comment rdf:nodeID="Nba2c4dca9eb54aef9a4596606e9024a5"/>
+    <strm:subject rdf:nodeID="N4d705421bf8947b4a459e226dd262b0b"/>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:genre>ambiances</strm:genre>
+    <strm:title>neige qui tombe</strm:title>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:path>./wav/neigeQuiTombe.wav</strm:path>
+    <strm:date_creation>2017-02-20T12:39:11+01:00</strm:date_creation>
+    <strm:instrument rdf:nodeID="N45e3ee3fcee3494e81b13541b46f0f4e"/>
+    <strm:rating>2</strm:rating>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfaa5afa8598a40f492e3dd9dd0a7fc16">
+    <rdf:li>libre</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>filtres</rdf:li>
+    <rdf:li>guitares</rdf:li>
+    <rdf:li>éléctriques</rdf:li>
+    <rdf:li>dans</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>morceau,</rdf:li>
+    <rdf:li>travail</rdf:li>
+    <rdf:li>tout</rdf:li>
+    <rdf:li>long</rdf:li>
+    <rdf:li>partie</rdf:li>
+    <rdf:li>a</rdf:li>
+    <rdf:li>métalliques</rdf:li>
+    <rdf:li>techniques</rdf:li>
+    <rdf:li>sur</rdf:li>
+    <rdf:li>electro,</rdf:li>
+    <rdf:li>plusieurs</rdf:li>
+    <rdf:li>acoustique</rdf:li>
+    <rdf:li>deux</rdf:li>
+    <rdf:li>le</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>sonore</rdf:li>
+    <rdf:li>titre,</rdf:li>
+    <rdf:li>été</rdf:li>
+    <rdf:li>saturation</rdf:li>
+    <rdf:li>ce</rdf:li>
+    <rdf:li>grand</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>synthèse</rdf:li>
+    <rdf:li>synthétiseurs</rdf:li>
+    <rdf:li>bruitages</rdf:li>
+    <rdf:li>notons</rdf:li>
+    <rdf:li>design</rdf:li>
+    <rdf:li>du</rdf:li>
+    <rdf:li>effet</rdf:li>
+    <rdf:li>réalisé</rdf:li>
+    <rdf:li>résonants,</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>overdrive
+</rdf:li>
+    <rdf:li>pour</rdf:li>
+    <rdf:li>électrique,</rdf:li>
+    <rdf:li>à</rdf:li>
+    <rdf:li>sound</rdf:li>
+    <rdf:li>numériques,</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>boites</rdf:li>
+    <rdf:li>analogiques</rdf:li>
+    <rdf:li>style</rdf:li>
+    <rdf:li>rythme</rdf:li>
+    <rdf:li>l'utilisation</rdf:li>
+    <rdf:li>pièces</rdf:li>
+    <rdf:li>avec</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nba2c4dca9eb54aef9a4596606e9024a5">
+    <rdf:li>aussi</rdf:li>
+    <rdf:li>type</rdf:li>
+    <rdf:li>différents</rdf:li>
+    <rdf:li>résonants,</rdf:li>
+    <rdf:li>dépouillé</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>penser</rdf:li>
+    <rdf:li>échos</rdf:li>
+    <rdf:li>routé</rdf:li>
+    <rdf:li>réverbération</rdf:li>
+    <rdf:li>rêve</rdf:li>
+    <rdf:li>donnant</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>est</rdf:li>
+    <rdf:li>vers</rdf:li>
+    <rdf:li>audio</rdf:li>
+    <rdf:li>elle</rdf:li>
+    <rdf:li>répétition</rdf:li>
+    <rdf:li>résultat</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>seul</rdf:li>
+    <rdf:li>quelque</rdf:li>
+    <rdf:li>utilisant</rdf:li>
+    <rdf:li>mystère</rdf:li>
+    <rdf:li>pur</rdf:li>
+    <rdf:li>droits</rdf:li>
+    <rdf:li>plusieurs</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>hall</rdf:li>
+    <rdf:li>deux</rdf:li>
+    <rdf:li>acoustique</rdf:li>
+    <rdf:li>instrument:</rdf:li>
+    <rdf:li>effets</rdf:li>
+    <rdf:li>appliqués</rdf:li>
+    <rdf:li>sont</rdf:li>
+    <rdf:li>ensuite</rdf:li>
+    <rdf:li>utilisés,</rdf:li>
+    <rdf:li>ont</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>composition</rdf:li>
+    <rdf:li>filtres</rdf:li>
+    <rdf:li>celui-ci,</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>impression</rdf:li>
+    <rdf:li>faire</rdf:li>
+    <rdf:li>été</rdf:li>
+    <rdf:li>dans</rdf:li>
+    <rdf:li>injecté</rdf:li>
+    <rdf:li>tout</rdf:li>
+    <rdf:li>chose</rdf:li>
+    <rdf:li>peut</rdf:li>
+    <rdf:li>le</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>temps</rdf:li>
+    <rdf:li>à</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb6e1c682789543e885e9f3d37357ce9a">
+    <rdf:li>musique</rdf:li>
+    <rdf:li>d'orchestre</rdf:li>
+    <rdf:li>dissonants</rdf:li>
+    <rdf:li>électroniques</rdf:li>
+    <rdf:li>sonorités</rdf:li>
+    <rdf:li>cordes</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>accords</rdf:li>
+    <rdf:li>angoissante</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>titre</rdf:li>
+    <rdf:li>mariant</rdf:li>
+    <rdf:li>sons</rdf:li>
+    <rdf:li>jouant</rdf:li>
+    <rdf:li>des</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf930bbd9ae14eababafacc1bcb6dc07">
+    <rdf:li>et</rdf:li>
+    <rdf:li>le</rdf:li>
+    <rdf:li>sonore</rdf:li>
+    <rdf:li>d'une</rdf:li>
+    <rdf:li>qui</rdf:li>
+    <rdf:li>traités</rdf:li>
+    <rdf:li>cette</rdf:li>
+    <rdf:li>multimédia
+</rdf:li>
+    <rdf:li>blanc</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>pourra</rdf:li>
+    <rdf:li>durée</rdf:li>
+    <rdf:li>filtres</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>ou</rdf:li>
+    <rdf:li>oscillateurs</rdf:li>
+    <rdf:li>réalisateur</rdf:li>
+    <rdf:li>mixer</rdf:li>
+    <rdf:li>utilisée</rdf:li>
+    <rdf:li>d'harmoniques</rdf:li>
+    <rdf:li>sont</rdf:li>
+    <rdf:li>ambiance</rdf:li>
+    <rdf:li>désirée</rdf:li>
+    <rdf:li>application</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>d'exposition,</rdf:li>
+    <rdf:li>plusieurs</rdf:li>
+    <rdf:li>créer</rdf:li>
+    <rdf:li>se</rdf:li>
+    <rdf:li>bruit</rdf:li>
+    <rdf:li>fond</rdf:li>
+    <rdf:li>utilisant</rdf:li>
+    <rdf:li>être</rdf:li>
+    <rdf:li>très</rdf:li>
+    <rdf:li>effets</rdf:li>
+    <rdf:li>bien</rdf:li>
+    <rdf:li>naturels</rdf:li>
+    <rdf:li>pièce</rdf:li>
+    <rdf:li>comme</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>générateurs</rdf:li>
+    <rdf:li>d'ambiance</rdf:li>
+    <rdf:li>rapproche</rdf:li>
+    <rdf:li>du</rdf:li>
+    <rdf:li>peux</rdf:li>
+    <rdf:li>utilisés</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>homogène</rdf:li>
+    <rdf:li>audio</rdf:li>
+    <rdf:li>bruitages</rdf:li>
+    <rdf:li>piste</rdf:li>
+    <rdf:li>avoir</rdf:li>
+    <rdf:li>pour</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc67e8e44aac44570afe69aa49d3032f6">
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>enfant</rdf:li>
+    <rdf:li>positif</rdf:li>
+    <rdf:li>bonheur</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>heureux</rdf:li>
+    <rdf:li>enfance</rdf:li>
+    <rdf:li>enfantin</rdf:li>
+    <rdf:li>joie</rdf:li>
+    <rdf:li>simplicité</rdf:li>
+    <rdf:li>jeux</rdf:li>
+    <rdf:li>jeu</rdf:li>
+    <rdf:li>légèreté</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9e0a730bfbf1432f8fb324eebb49ad2d">
+    <strm:path>./wav/5Keer.wav</strm:path>
+    <strm:comment rdf:nodeID="Nb9542cb0f1f045ec82d16f1ea124e9c0"/>
+    <strm:genre>electro</strm:genre>
+    <strm:rating>4</strm:rating>
+    <strm:date_creation>2017-02-20T17:11:45+01:00</strm:date_creation>
+    <strm:subject rdf:nodeID="N860e869d0b424088b309a0152f3c6628"/>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:rigth>false</strm:rigth>
+    <strm:title>5keer</strm:title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9542cb0f1f045ec82d16f1ea124e9c0">
+    <rdf:li>droit</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>à</rdf:li>
+    <rdf:li>synthétiseurs,</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>électro</rdf:li>
+    <rdf:li>rythme</rdf:li>
+    <rdf:li>boîte</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N267d43868b6340c1a2f714fa37509a8b">
+    <rdf:li>cordes</rdf:li>
+    <rdf:li>peur</rdf:li>
+    <rdf:li>angoisse</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44445564074f4d97a770a363aa3b228d">
+    <rdf:li>réverbération</rdf:li>
+    <rdf:li>)</rdf:li>
+    <rdf:li>diverses,</rdf:li>
+    <rdf:li>générée</rdf:li>
+    <rdf:li>par</rdf:li>
+    <rdf:li>en</rdf:li>
+    <rdf:li>puis</rdf:li>
+    <rdf:li>ajouté</rdf:li>
+    <rdf:li>tout</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>filtres</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>l'utilisation</rdf:li>
+    <rdf:li>petites</rdf:li>
+    <rdf:li>été</rdf:li>
+    <rdf:li>effets</rdf:li>
+    <rdf:li>types</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>percussions</rdf:li>
+    <rdf:li>d'oscillateurs,</rdf:li>
+    <rdf:li>édité</rdf:li>
+    <rdf:li>a</rdf:li>
+    <rdf:li>partie</rdf:li>
+    <rdf:li>numériquement</rdf:li>
+    <rdf:li>résultat</rdf:li>
+    <rdf:li>auxquels</rdf:li>
+    <rdf:li>audio</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>(</rdf:li>
+    <rdf:li>écho</rdf:li>
+    <rdf:li>j'ai</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>d'ambiance</rdf:li>
+    <rdf:li>moment</rdf:li>
+    <rdf:li>appliquée</rdf:li>
+    <rdf:li>traité</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>cette</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>le</rdf:li>
+    <rdf:li>grande</rdf:li>
+    <rdf:li>différents</rdf:li>
+    <rdf:li>d'expérimentations</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N252d8557eaad45678f9f11a8fc352b5a">
+    <rdf:li>enfant</rdf:li>
+    <rdf:li>gaieté</rdf:li>
+    <rdf:li>comique</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>burlesque</rdf:li>
+    <rdf:li>joie</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45e3ee3fcee3494e81b13541b46f0f4e">
+    <rdf:li>échos</rdf:li>
+    <rdf:li>effets</rdf:li>
+    <rdf:li>piano</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d940af8dfee460ab7c9661c960f31d1">
+    <rdf:li>scènes</rdf:li>
+    <rdf:li>en</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>tristes,</rdf:li>
+    <rdf:li>fréquent</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>ou</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>3</rdf:li>
+    <rdf:li>nostalgique,</rdf:li>
+    <rdf:li>douce</rdf:li>
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>illustrera</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>elle</rdf:li>
+    <rdf:li>paix</rdf:li>
+    <rdf:li>d'harmonie,</rdf:li>
+    <rdf:li>sérenité
+</rdf:li>
+    <rdf:li>nostalgiques</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>valse</rdf:li>
+    <rdf:li>lent</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>impression</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>merveille</rdf:li>
+    <rdf:li>à</rdf:li>
+    <rdf:li>(</rdf:li>
+    <rdf:li>temps</rdf:li>
+    <rdf:li>moments</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>changement</rdf:li>
+    <rdf:li>tempo</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>),</rdf:li>
+    <rdf:li>donnant</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N06998aad31144f3ab5cf78c3ce8302f5">
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:rating>4</strm:rating>
+    <strm:comment rdf:nodeID="Ncf930bbd9ae14eababafacc1bcb6dc07"/>
+    <strm:path>./wav/beta.wav</strm:path>
+    <strm:title>beta</strm:title>
+    <strm:date_creation>2017-02-20T12:44:22+01:00</strm:date_creation>
+    <strm:instrument rdf:nodeID="N6632a45313da4b729aa308cb883941df"/>
+    <strm:rigth>false</strm:rigth>
+    <strm:subject rdf:nodeID="N2708bf902d4b475ab095b5b234e4d519"/>
+    <strm:genre>ambiances</strm:genre>
+    <strm:author>hicham chahidi</strm:author>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9f7cdbd656cf4f8fb911d53aa817530b">
+    <strm:rigth>false</strm:rigth>
+    <strm:instrument rdf:nodeID="Ne6504d9985d4483c9c20a57625fe4597"/>
+    <strm:date_creation>2017-02-20T12:58:20+01:00</strm:date_creation>
+    <strm:comment rdf:nodeID="Nec08db0b11384a009730842f8b3d65ce"/>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:genre>piano</strm:genre>
+    <strm:title>miuzz</strm:title>
+    <strm:path>./wav/miuzz.wav</strm:path>
+    <strm:subject rdf:nodeID="Nc67e8e44aac44570afe69aa49d3032f6"/>
+    <strm:rating>3</strm:rating>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd666a50c3cda48298631bc59eb3cb4c0">
+    <strm:author>hicham chahidi</strm:author>
+    <strm:path>./wav/maria.wav</strm:path>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:comment rdf:nodeID="N20f1730c8f924281bbc3814745e99af0"/>
+    <strm:genre>ethnique</strm:genre>
+    <strm:rigth>false</strm:rigth>
+    <strm:rating>3</strm:rating>
+    <strm:date_creation>2017-02-20T17:18:25+01:00</strm:date_creation>
+    <strm:subject rdf:nodeID="N56c8fa04e2d949ceb683e4cdf576a6ea"/>
+    <strm:title>maria</strm:title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbb22a33380234ecdaaf76f2fb2f19dee">
+    <rdf:li>musique</rdf:li>
+    <rdf:li>reste</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>main</rdf:li>
+    <rdf:li>titre</rdf:li>
+    <rdf:li>joue</rdf:li>
+    <rdf:li>une</rdf:li>
+    <rdf:li>sur</rdf:li>
+    <rdf:li>gauche</rdf:li>
+    <rdf:li>évolue</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>douceur</rdf:li>
+    <rdf:li>évoquant</rdf:li>
+    <rdf:li>qui</rdf:li>
+    <rdf:li>sorte</rdf:li>
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>thème</rdf:li>
+    <rdf:li>préparé</rdf:li>
+    <rdf:li>droite</rdf:li>
+    <rdf:li>mais</rdf:li>
+    <rdf:li>ce</rdf:li>
+    <rdf:li>peu</rdf:li>
+    <rdf:li>continue</rdf:li>
+    <rdf:li>profondeur</rdf:li>
+    <rdf:li>tempo</rdf:li>
+    <rdf:li>circulaire,</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>débridé</rdf:li>
+    <rdf:li>basse</rdf:li>
+    <rdf:li>jouée</rdf:li>
+    <rdf:li>est</rdf:li>
+    <rdf:li>d'une</rdf:li>
+    <rdf:li>grande</rdf:li>
+    <rdf:li>très</rdf:li>
+    <rdf:li>motif</rdf:li>
+    <rdf:li>lent</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>libre</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfca7cc4b7b9e492ba17609807fdc0f15">
+    <rdf:li>rapide</rdf:li>
+    <rdf:li>illustrera</rdf:li>
+    <rdf:li>humoristiques
+</rdf:li>
+    <rdf:li>à</rdf:li>
+    <rdf:li>piano</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>tempo</rdf:li>
+    <rdf:li>côté</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>convient</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>scènes</rdf:li>
+    <rdf:li>en</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>exprimer</rdf:li>
+    <rdf:li>legères,</rdf:li>
+    <rdf:li>même</rdf:li>
+    <rdf:li>bonne</rdf:li>
+    <rdf:li>humeur</rdf:li>
+    <rdf:li>elle</rdf:li>
+    <rdf:li>joyeuse,</rdf:li>
+    <rdf:li>certain</rdf:li>
+    <rdf:li>2</rdf:li>
+    <rdf:li>gaieté,</rdf:li>
+    <rdf:li>temps,</rdf:li>
+    <rdf:li>au</rdf:li>
+    <rdf:li>burlesque</rdf:li>
+    <rdf:li>merveille</rdf:li>
+    <rdf:li>comique</rdf:li>
+    <rdf:li>un</rdf:li>
+    <rdf:li>la</rdf:li>
+    <rdf:li>pour</rdf:li>
+    <rdf:li>gaie</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6023072496b24f81bd0c1e183031ff6e">
+    <strm:date_creation>2017-02-20T17:14:09+01:00</strm:date_creation>
+    <strm:genre>electro</strm:genre>
+    <strm:rating>1</strm:rating>
+    <strm:subject rdf:nodeID="N267d43868b6340c1a2f714fa37509a8b"/>
+    <strm:path>./wav/treize.wav</strm:path>
+    <strm:rigth>false</strm:rigth>
+    <strm:comment rdf:nodeID="Nb6e1c682789543e885e9f3d37357ce9a"/>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:title>treize</strm:title>
+    <strm:author>hicham chahidi</strm:author>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ce5cda4c7744d45aedb7abaeb9b7045">
+    <rdf:li>quanun,</rdf:li>
+    <rdf:li>nay,</rdf:li>
+    <rdf:li>instruments</rdf:li>
+    <rdf:li>persane,</rdf:li>
+    <rdf:li>sonorités</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>riq</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>def,</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>originaires</rdf:li>
+    <rdf:li>d'iran:</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>musique</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97b83cb9cc01446bb379d539c53c2614">
+    <rdf:li>design sonore</rdf:li>
+    <rdf:li>mystère</rdf:li>
+    <rdf:li>étrange</rdf:li>
+    <rdf:li>espace</rdf:li>
+    <rdf:li>science fiction</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na687fcc7787a4727b8cb0ed4e9fe184d">
+    <rdf:li>bayan</rdf:li>
+    <rdf:li>traditionnelle</rdf:li>
+    <rdf:li>traditionnel)</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>domra,</rdf:li>
+    <rdf:li>russe</rdf:li>
+    <rdf:li>(accordéon</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>balalaïka</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>guitares</rdf:li>
+    <rdf:li>(sorte</rdf:li>
+    <rdf:li>russes),</rdf:li>
+    <rdf:li>percussion</rdf:li>
+    <rdf:li>de</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4d705421bf8947b4a459e226dd262b0b">
+    <rdf:li>rêve</rdf:li>
+    <rdf:li>aquatique</rdf:li>
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>mystère</rdf:li>
+    <rdf:li>neige</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc8f480387d624c248fd759b59536bc5d">
+    <rdf:li>voyage</rdf:li>
+    <rdf:li>force</rdf:li>
+    <rdf:li>énergie</rdf:li>
+    <rdf:li>mystique</rdf:li>
+    <rdf:li>liberté</rdf:li>
+    <rdf:li>pouvoir</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3fc38e15b68646db8d0cd5d0e07d3ca1">
+    <strm:genre>ethnique</strm:genre>
+    <strm:subject rdf:nodeID="N43906c6731af4c579114ac1c0220d74a"/>
+    <strm:date_creation>2017-02-20T17:21:35+01:00</strm:date_creation>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:comment rdf:nodeID="Na687fcc7787a4727b8cb0ed4e9fe184d"/>
+    <strm:path>./wav/night-moscow.wav</strm:path>
+    <strm:title>night in moscow</strm:title>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:rating>2</strm:rating>
+    <strm:rigth>false</strm:rigth>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nac30800a693044da85ca1f0b35bc167f">
+    <strm:date_creation>2017-02-20T17:22:57+01:00</strm:date_creation>
+    <strm:subject rdf:nodeID="N0d61bafc4c8348089bdb52ae6f027540"/>
+    <strm:comment rdf:nodeID="Nf4bf97569d194f9d9303b62249a792e0"/>
+    <strm:genre>ethnique</strm:genre>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:title>shine</strm:title>
+    <strm:path>./wav/shine.wav</strm:path>
+    <strm:rating>1</strm:rating>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:rigth>false</strm:rigth>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb76dc8160f2c420b9965c6b22c946bd4">
+    <rdf:li>piano</rdf:li>
+    <rdf:li>percussions</rdf:li>
+    <rdf:li>boite à musique</rdf:li>
+    <rdf:li>bruitages</rdf:li>
+    <rdf:li>alto</rdf:li>
+    <rdf:li>synthétiseur</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6a57059fa501418cbbd015b3e6c3296d">
+    <strm:genre>ethnique</strm:genre>
+    <strm:rating>4</strm:rating>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:comment rdf:nodeID="N3ce5cda4c7744d45aedb7abaeb9b7045"/>
+    <strm:date_creation>2017-02-20T17:22:22+01:00</strm:date_creation>
+    <strm:rigth>false</strm:rigth>
+    <strm:subject rdf:nodeID="Na58375ce1ce34d5c95958da47a78c49d"/>
+    <strm:title>persian flower</strm:title>
+    <strm:path>./wav/persian-flower.wav</strm:path>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a193d7e65a5456a894542e0fe69178a">
+    <strm:subject rdf:nodeID="Nf01b5bf7ab9a4b1b970eb9b8707a8b99"/>
+    <strm:rigth>false</strm:rigth>
+    <strm:path>./wav/hilouine.wav</strm:path>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:date_creation>2017-02-20T12:51+01:00</strm:date_creation>
+    <strm:rating>2</strm:rating>
+    <strm:instrument rdf:nodeID="N058ba867f5ac4a199d8dff603c3c88da"/>
+    <strm:genre>piano</strm:genre>
+    <strm:comment rdf:nodeID="N9d940af8dfee460ab7c9661c960f31d1"/>
+    <strm:title>hilouine</strm:title>
+    <strm:author>hicham chahidi</strm:author>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N79c3341200414c1b80180be710344b95">
+    <strm:rating>2</strm:rating>
+    <strm:subject rdf:nodeID="N3a1870cb1de743cdb367a496440bdb89"/>
+    <strm:genre>electro</strm:genre>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:title>babydoll</strm:title>
+    <strm:rigth>false</strm:rigth>
+    <strm:date_creation>2017-02-20T17:12:38+01:00</strm:date_creation>
+    <strm:path>./wav/babydoll.wav</strm:path>
+    <strm:comment rdf:nodeID="N45452bcd4c6745e6b8a6c06caa6ebfca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb18490a00a1547949fae2455dfda1a2c">
+    <strm:path>./wav/mutant.wav</strm:path>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:genre>piano</strm:genre>
+    <strm:date_creation>2017-02-20T17:16:01+01:00</strm:date_creation>
+    <strm:instrument rdf:nodeID="N2699923810c545e2b5cc57606d80b31d"/>
+    <strm:rigth>false</strm:rigth>
+    <strm:rating>2</strm:rating>
+    <strm:title>mutant</strm:title>
+    <strm:subject rdf:nodeID="N7362fd134b21418a83c2c5b701a4daed"/>
+    <strm:comment rdf:nodeID="Nbb22a33380234ecdaaf76f2fb2f19dee"/>
+    <strm:composer>hicham chahidi</strm:composer>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf4bf97569d194f9d9303b62249a792e0">
+    <rdf:li>musique</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>de</rdf:li>
+    <rdf:li>des</rdf:li>
+    <rdf:li>influences</rdf:li>
+    <rdf:li>jazz</rdf:li>
+    <rdf:li>africaines</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>et</rdf:li>
+    <rdf:li>celtiques,</rdf:li>
+    <rdf:li>ethnique,</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2699923810c545e2b5cc57606d80b31d">
+    <rdf:li>piano</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N263f8277acd345e986181d3fc6ce93d5">
+    <strm:comment rdf:nodeID="Nfca7cc4b7b9e492ba17609807fdc0f15"/>
+    <strm:rating>5</strm:rating>
+    <strm:date_creation>2017-02-20T12:57:57+01:00</strm:date_creation>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:title>ramaya</strm:title>
+    <strm:path>./wav/ramaya.wav</strm:path>
+    <strm:rigth>false</strm:rigth>
+    <strm:genre>piano</strm:genre>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:subject rdf:nodeID="N252d8557eaad45678f9f11a8fc352b5a"/>
+    <strm:instrument rdf:nodeID="Nee3c61b92dd24749b46a59f85829d17f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N085de2ba60c144488e72a9e49f2833ed">
+    <rdf:li>basse analogique</rdf:li>
+    <rdf:li>boites à rythme</rdf:li>
+    <rdf:li>synthétiseurs</rdf:li>
+    <rdf:li>bruitages</rdf:li>
+    <rdf:li>guitares électrique</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6632a45313da4b729aa308cb883941df">
+    <rdf:li>synthèse sonore</rdf:li>
+    <rdf:li>effets</rdf:li>
+    <rdf:li>bruitages</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d61bafc4c8348089bdb52ae6f027540">
+    <rdf:li>afrique</rdf:li>
+    <rdf:li>jazz</rdf:li>
+    <rdf:li>musique celtique</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8e113a30b244468bbdff70cdb09c7ae1">
+    <strm:rigth>false</strm:rigth>
+    <strm:date_creation>2017-02-20T12:42:08+01:00</strm:date_creation>
+    <strm:comment rdf:nodeID="N44445564074f4d97a770a363aa3b228d"/>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:title>delta</strm:title>
+    <strm:genre>ambiances</strm:genre>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:rating>4</strm:rating>
+    <strm:instrument rdf:nodeID="Nccd3c96ddea843589a505dc5bf72e5d1"/>
+    <strm:subject rdf:nodeID="N97b83cb9cc01446bb379d539c53c2614"/>
+    <strm:path>./wav/delta.wav</strm:path>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na58375ce1ce34d5c95958da47a78c49d">
+    <rdf:li>arabe</rdf:li>
+    <rdf:li>perse</rdf:li>
+    <rdf:li>orientale</rdf:li>
+    <rdf:li>musique iranienne</rdf:li>
+    <rdf:li>musulmane</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N56c8fa04e2d949ceb683e4cdf576a6ea">
+    <rdf:li>musique irlandaise</rdf:li>
+    <rdf:li>fête</rdf:li>
+    <rdf:li>musique folk</rdf:li>
+    <rdf:li>écossaise</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N712e7049754740099cd63d0775c7bf32">
+    <strm:title>tetoma</strm:title>
+    <strm:genre>ambiances</strm:genre>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:rigth>false</strm:rigth>
+    <strm:comment rdf:nodeID="N942cc57b661a4f7aab1b277ef2cbf043"/>
+    <strm:path>./wav/tetoma.wav</strm:path>
+    <strm:date_creation>2017-02-20T17:10:10+01:00</strm:date_creation>
+    <strm:subject rdf:nodeID="N71015ac2eef94ccebbc91746b59225eb"/>
+    <strm:rating>4</strm:rating>
+    <strm:instrument rdf:nodeID="Nb76dc8160f2c420b9965c6b22c946bd4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43906c6731af4c579114ac1c0220d74a">
+    <rdf:li>slave</rdf:li>
+    <rdf:li>musique russe</rdf:li>
+    <rdf:li>soviétique</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45452bcd4c6745e6b8a6c06caa6ebfca">
+    <rdf:li>à</rdf:li>
+    <rdf:li>libre</rdf:li>
+    <rdf:li>musique</rdf:li>
+    <rdf:li>avec</rdf:li>
+    <rdf:li>rythmes</rdf:li>
+    <rdf:li>électro</rdf:li>
+    <rdf:li>boites</rdf:li>
+    <rdf:li>droit</rdf:li>
+    <rdf:li>sons</rdf:li>
+    <rdf:li>synthétiques,</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e75f50629eb46539b5d1579cea7f04e">
+    <strm:genre>electro</strm:genre>
+    <strm:path>./wav/luiz.wav</strm:path>
+    <strm:rating>4</strm:rating>
+    <strm:title>luiz</strm:title>
+    <strm:rigth>false</strm:rigth>
+    <strm:comment rdf:nodeID="Nfaa5afa8598a40f492e3dd9dd0a7fc16"/>
+    <strm:date_creation>2017-02-20T15:38:41+01:00</strm:date_creation>
+    <strm:instrument rdf:nodeID="N085de2ba60c144488e72a9e49f2833ed"/>
+    <strm:composer>hicham chahidi</strm:composer>
+    <strm:author>hicham chahidi</strm:author>
+    <strm:subject rdf:nodeID="Nc8f480387d624c248fd759b59536bc5d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nccd3c96ddea843589a505dc5bf72e5d1">
+    <rdf:li>synthèse sonore</rdf:li>
+    <rdf:li>percussions et effets</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7362fd134b21418a83c2c5b701a4daed">
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>douceur</rdf:li>
+    <rdf:li>contemplation</rdf:li>
+    <rdf:li>piano solo</rdf:li>
+    <rdf:li>rêve</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N71015ac2eef94ccebbc91746b59225eb">
+    <rdf:li>neige</rdf:li>
+    <rdf:li>froid</rdf:li>
+    <rdf:li>tempête</rdf:li>
+    <rdf:li>aquatique</rdf:li>
+    <rdf:li>vent</rdf:li>
+    <rdf:li>mystère</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf01b5bf7ab9a4b1b970eb9b8707a8b99">
+    <rdf:li>piano</rdf:li>
+    <rdf:li>paix</rdf:li>
+    <rdf:li>amour</rdf:li>
+    <rdf:li>tristesse</rdf:li>
+    <rdf:li>regrets</rdf:li>
+    <rdf:li>pureté</rdf:li>
+    <rdf:li>solitude</rdf:li>
+    <rdf:li>nostalgie</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N860e869d0b424088b309a0152f3c6628">
+    <rdf:li>house</rdf:li>
+    <rdf:li>techno</rdf:li>
+    <rdf:li>acid</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3a1870cb1de743cdb367a496440bdb89">
+    <rdf:li>techno</rdf:li>
+    <rdf:li>electro</rdf:li>
+    <rdf:li>house</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee3c61b92dd24749b46a59f85829d17f">
+    <rdf:li>piano</rdf:li>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne6504d9985d4483c9c20a57625fe4597">
+    <rdf:li>piano</rdf:li>
+  </rdf:Description>
+</rdf:RDF>
