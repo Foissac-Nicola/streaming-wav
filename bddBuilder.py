@@ -14,8 +14,7 @@ class BDDBuilder :
         xmp_data = xmp.extract_xmp(path)
         rdf_data =xml.parse_xml(xmp_data)
         rdf_data['path'] = path
-        rdf.add_sound(graph,'',**rdf_data)
-
+        rdf.add_sound(graph,**rdf_data)
 
     @staticmethod
     def make_bdd(path=None):
@@ -30,18 +29,21 @@ class BDDBuilder :
             '''
             PREFIX strm: <urn:/streaming/>
 
-            SELECT DISTInct ?x ?z ?k ?w
+            SELECT DISTInct ?x ?z ?k ?w ?t
             WHERE {
                 ?x strm:instrument [ ?k ?z ].
                 ?x strm:subject [ ?k ?w ].
+                ?x strm:genre ?y .
+                ?x strm:path ?t.
+                ?x strm:rating ?q.
+                filter( ?k = rdf:li && ?z !='alto'^^xsd:string && ?y !='ambiances')
                 
-                filter( ?k = rdf:li && ?z ='alto'^^xsd:string || ?w ='douceur')
             } group by ?x
             ''')
         if qres is not None:
             for row in qres:
                 print(row)
-
+    #
     @staticmethod
     def test(path=None):
         xmp_data = xmp.extract_xmp(path)

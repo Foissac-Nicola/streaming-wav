@@ -98,7 +98,7 @@ class RDFHelper:
 
 
     @staticmethod
-    def add_sound(graph,name,path=None,title=None,author=None,composer=None,genre=None,rating=None,date=None,rigth=None,instrument=[],description=[],subject=[]):
+    def add_sound(graph,path=None,title=None,author=None,composer=None,genre=None,rating=None,date=None,rigth=None,instrument=[],description=[],subject=[]):
 
         k = rdf.Namespace(u"urn:/streaming/")
         bnode_sound = rdf.BNode()
@@ -122,24 +122,6 @@ class RDFHelper:
 
         file.close()
         return graph
-
-a = rdf.Graph()
-t = {'instrument': ['bruitages', ' synthèse sonore', ' effets'], 'subject': ['rêve', 'science fiction', 'mystère', 'aquatique', 'espace', 'sound design'], 'description': ['Musique', "d'ambiance", 'utilisant', 'des', 'bruitages', 'naturels', 'traités', 'avec', 'des', 'filtres', 'et', 'des', 'effets', 'audio.', 'Des', 'oscillateurs', 'et', 'des', 'générateurs', "d'harmoniques", 'sont', 'utilisés', 'pour', 'créer', 'une', 'ambiance', 'homogène', 'qui', 'se', 'rapproche', 'du', 'bruit', 'Blanc.', 'Le', 'réalisateur', 'peux', 'mixer', 'plusieurs', 'piste', 'de', 'cette', 'musique', 'pour', 'avoir', 'la', 'durée', 'désirée.', 'Cette', 'musique', 'pourra', 'très', 'bien', 'être', 'utilisée', 'comme', 'ambiance', 'sonore', 'de', 'pièce', "d'exposition,", 'ou', 'comme', 'musique', 'de', 'fond', "d'une", 'application', 'multimédia.\n'], 'title': 'Beta', 'author': 'Hicham Chahidi', 'composer': 'Hicham Chahidi', 'date': '2017-02-20T12:44:22+01:00', 'genre': 'Ambiances', 'rating': '4', 'rigth': 'False'}
-a = RDFHelper.add_sound(a,"test",**t)
-# a = RDFHelper.add_musique(a,"test",comment=['bien','3minute'],genre='electro',instrument=['guitare',"saxo"],author="nfoissac",composer="lfavrelie",note="2",subject=["cool"])
-qres = a.query(
-    '''
-    PREFIX strm: <urn:/streaming/>
-
-    SELECT DISTINCT ?x ?z ?k
-    WHERE {
-        ?x strm:instrument [ ?k ?z ].
-        filter( ?k = rdf:li && ?z ='saxo'^^xsd:string)
-    }
-    ''')
-if qres is not None:
-    for row in qres:
-        print(row)
 
 
 
