@@ -11,18 +11,20 @@ mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     mySocket.connect((HOST, PORT))
 
-except socket.error:
-    print("Connexion has failed.")
+except socket.error as err:
+    print(err)
     sys.exit()    
 print("Connected to the server.")
 
+
 # 3) Interacts with the server:
-msgClient = "HEAD / HTTP/1.0"
+msgClient = "OPTIONS rtsp:/home/nfoissac/Bureau/dcn_alter/streaming-wav/streamapp/static/media/wav/treize.wav RTSP/1.0\nCSeq: 1"
 mySocket.send(msgClient.encode("Utf8"))
 
 
+
 while 1:
-    msgServeur = mySocket.recv(1024).decode("Utf8")
+    msgServeur = mySocket.recv(1024)
     if not msgServeur:
         break
     print(msgServeur)

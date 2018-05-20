@@ -1,70 +1,143 @@
 #-*- coding: utf-8 -*-
 
 import socket as sock
+import os
+import fcntl
 from time import sleep
 import sys
 from threading import Thread as thread , RLock as lock
 
 mutex = lock()
+chunk = 1024
 
-class STRMServer:
+# émision -> 7801
+# reception -> 7800
 
-    def __init__(self,host="127.0.0.1",port=[7800,7801]) -> None:
-        self.host = host
+class STRMServersend(thread):
+    def __init__(self, address, port):
+        thread.__init__(self)
+        self.address = address
         self.port = port
+        self.connection = sock.socket(sock.AF_INET, sock.SOCK_STREAM)
+        self.connection.setsockopt(sock.SOL_SOCKET, sock.SO_REUSEADDR, 1)
+        #fcntl.fcntl(self.connection, fcntl.F_SETFL, os.O_NONBLOCK)
+        self.connection.bind((address, port))
 
-        self.socket_send = sock.socket(sock.AF_INET, sock.SOCK_STREAM)
-        self.socket_send.setsockopt(sock.SOL_SOCKET, sock.SO_REUSEADDR, 1)
+        self.connection.listen(50)
+        print("[+][streaming] New server started on " + address + ":" + str(port))
 
-        self.socket_recv = sock.socket(sock.AF_INET, sock.SOCK_STREAM)
-        self.socket_recv.setsockopt(sock.SOL_SOCKET, sock.SO_REUSEADDR, 1)
-
-        try:
-            self.socket_send.bind((self.host, self.port[0]))
-            self.socket_recv.bind((self.host, self.port[1]))
-        except sock.error:
-            print("Socket binding to given adress has failed.")
-            sys.exit
-        self.socket_recv.listen(1)
-        self.socket_send.listen(1)
-        print('Sock recv on port %s ...' % self.port[1])
-        print('Sock send on port %s ...' % self.port[0])
-        self.__listeneur()
-
-
-
-
-    def __listeneur(self):
+    def run(self):
         while True:
+            print("&")
+            client_connection, client_address = self.connection.accept()
+            print(client_address)
+            print(client_connection)
+            request = client_connection.recv(1024)
+            print(request)
+            f = open('/home/nfoissac/Bureau/dcn_alter/streaming-wav/streamapp/static/media/wav/treize.wav', 'rb')
+            # st = os.fstat(f.fileno())
+            # length = st.st_size
             try:
-                msg = self.socket_recv.recv(4096)
-            except sock.timeout as err:
-                # this next if/else is a bit redundant, but illustrates how the
-                # timeout exception is setup
-                if err == 'timed out':
-                    sleep(1)
-                    print('recv timed out, retry later')
-                    continue
-                else:
-                    print(err)
-                    sys.exit(1)
-            except sock.error as err:
-                # Something else happened, handle error, exit, etc.
-                print(err)
-                sys.exit(1)
-            else:
-                if len(msg) == 0:
-                    print('orderly shutdown on server end')
-                    sys.exit(0)
-                else:
-                    pass
+                data = f.read(chunk)
+                client_connection.send(data)
+                while data:
+                    data = f.read(chunk)
+                    client_connection.send(data)
+            except:
+                break
+            #self.conn.recv(1024)
+        self.connection.close()
+
+def tcp_video_thread():
+    camera = cv2.VideoCapture(VIDEO_CAM_INDEX)
+    connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    connection.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    connection.bind((IP_SERVER, VIDEO_SERVER_PORT))
+    connection.listen(MAX_NUM_CONNECTIONS_LISTENER)
+    while True:
+        (conn, (ip, port)) = connection.accept()
+        thread = ConnectionPoolVideo(ip, port, conn, camera)
+        thread.start()
+
+
+STRMServersend("127.0.0.1",7800).start()
+
+# class STRMServer:
+#
+#     def __init__(self,host="127.0.0.1",port=[7801,7800]) -> None:
+#
+#         self.host = host
+#         self.port = port
+#
+#         self.socket_send = sock.socket(sock.AF_INET, sock.SOCK_STREAM)
+#         self.socket_send.setsockopt(sock.SOL_SOCKET, sock.SO_REUSEADDR, 1)
+#
+#
+#         self.socket_recv = sock.socket(sock.AF_INET, sock.SOCK_STREAM)
+#         self.socket_recv.setsockopt(sock.SOL_SOCKET, sock.SO_REUSEADDR, 1)
+#
+#         try:
+#             self.socket_send.bind((self.host, self.port[1]))
+#             self.socket_recv.bind((self.host, self.port[0]))
+#         except sock.error:
+#             print("Socket binding to given adress has failed.")
+#             sys.exit
+#         self.socket_recv.listen(1)
+#         self.socket_send.listen(1)
+#         print('Sock recv on port %s ...' % self.port[1])
+#         print('Sock send on port %s ...' % self.port[0])
+#         self.__listeneur()
+#
+#
+#     def __listeneur(self):
+#         while True:
+#             client_connection, client_address = self.socket_send.accept()
+#             fcntl.fcntl(self.socket_send, fcntl.F_SETFL, os.O_NONBLOCK)
+#             request = client_connection.recv(1024)
+#             print(request)
+#             f = open('/home/nfoissac/Bureau/dcn_alter/streaming-wav/streamapp/static/media/wav/treize.wav', 'rb')
+#             # st = os.fstat(f.fileno())
+#             # length = st.st_size
+#
+#             data = f.read(chunk)
+#             client_connection.send(data)
+#             while data:
+#                 data = f.read(chunk)
+#                 client_connection.send(data)
+#             valid=False
+
+    # def __listeneur(self):
+    #     while True:
+    #         try:
+    #             msg = self.socket_recv.recv(4096)
+    #         except sock.timeout as err:
+    #             # this next if/else is a bit redundant, but illustrates how the
+    #             # timeout exception is setup
+    #             if err == 'timed out':
+    #                 sleep(1)
+    #                 print('recv timed out, retry later')
+    #                 continue
+    #             else:
+    #                 print(err)
+    #                 sys.exit(1)
+    #         except sock.error as err:
+    #             # Something else happened, handle error, exit, etc.
+    #             print(err)
+    #             sys.exit(1)
+    #         else:
+    #             if len(msg) == 0:
+    #                 print('orderly shutdown on server end')
+    #                 sys.exit(0)
+    #             else:
+    #                 pass
+
             # got a message do something :)
 
 
 
 
 
-a = STRMServer()
+#a = STRMServer()
 
 
 # print('Serving HTTP on port %s ...' % PORT)

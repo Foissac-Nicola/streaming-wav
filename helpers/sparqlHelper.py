@@ -47,7 +47,7 @@ class SPARQLHelper:
             self.__seek_rating(rating=rating)
             self.__query = self.__query[:-4] + ')'
 
-        self.__query = self.__query + '} group by ?node'
+        self.__query = self.__query + '} group by ?node ORDER BY ?title'
 
     def __seek_instrument(self,instrument=[]):
         for item in instrument :
