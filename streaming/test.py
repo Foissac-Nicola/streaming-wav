@@ -29,7 +29,6 @@ class ThreadSafeDict:
     def set(self,key,value):
         self.__lock.acquire()
         self.__dictionairy[key]=value
-        #print(self.__dictionairy)
         self.__lock.release()
 
     def get (self, key):
@@ -58,10 +57,10 @@ class ThreadSafeDict:
             self.__dictionairy[key]['chunk'] = self.__dictionairy[key]['chunk'] + 1
         self.__lock.release()
 
-    def update_status(self, key):
+    def update_status(self,key,value):
             self.__lock.acquire()
             if key in self.__dictionairy:
-                self.__dictionairy[key]['new_status'] = 0
+                self.__dictionairy[key]['status'] = value
             self.__lock.release()
 
     def exist_key(self, key):
@@ -73,6 +72,7 @@ class ThreadSafeDict:
 
 
 liste = ThreadSafeDict()
+
 
 
 class RTPPoolServer(Thread):
@@ -100,17 +100,31 @@ class RTPPoolServer(Thread):
                     uuid = split[4]
                     link = split[1]
                     commend= split[0]
-                    print("["+commend[2:]+"][RTP][" + self.address + ":" + str(self.port) + "] " +link+":"+ uuid)
+                    #Creation
                     if not liste.exist_key(uuid):
-                        liste.set(uuid,{'cmd':commend,'link':link , 'bind':0 , 'chunk':0 , 'new_status':0 })
+                        liste.set(uuid,{'cmd':commend,'link':link , 'bind':0 , 'chunk':0 , 'status':-1 ,"state":False })
                     else:
                         current=liste.get(uuid)
                         if current :
-                            if current['link'] != link:
-                                liste.set(uuid,{'cmd':commend,'link':link , 'bind':0 , 'chunk':0 , 'new_status':1 })
-                                print(liste.get(uuid))
+                            print(link)
+                            if current['link'] != link and current['status'] == 0 :
+                                liste.set(uuid,{'cmd':commend,'link':link , 'bind':0 , 'chunk':0 , 'status':1, "state":False })
 
+                            if current['status'] == 0 and current['link'] == link and current['state'] == False :
+                                liste.set(uuid,{'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 2 ,"state":False})
 
+                            if current['status'] == 0 and current['link'] == link and current['state'] == True :
+                                liste.set(uuid,{'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 3 ,"state":False})
+
+                if data.startswith(b'PAUSE'):
+                    split= str(data).split(' ')
+                    uuid = split[4]
+                    link = split[1]
+                    commend= split[0]
+                    current=liste.get(uuid)
+                    if current :
+                        if current['link'] == link:
+                            liste.set(uuid,{'cmd':commend,'link':link , 'bind':0 , 'chunk':0 , 'status':5 , "state":True })
         except Exception as err:
             print(err)
             self.contex.close()
@@ -130,6 +144,8 @@ class RTSPPoolServer(Thread):
         self.sampwidth = 0
         self.nchannels = 0
         self.framerate = 0
+        self.is_run = False
+        self.is_pause = False
         print("[+][RTSP][" + self.ip + ":" + str(self.port) + "] Connected")
 
     def __send_rstp_describe(self,path):
@@ -147,32 +163,59 @@ class RTSPPoolServer(Thread):
 
     def run(self):
         try:
-            while True:
+            self.is_run = True
+            while self.is_run:
                 time.sleep(0.5)
                 if not self.bind:
-                    print('bind',self.port)
                     self.bind , self.uuid = liste.try_bind(self.port)
                 else:
-                    #l = liste.get(str(self.uuid))
-                    # print(l)
 
                     if not self.file_open:
                         self.file = open(liste.get(self.uuid)['link'],'rb')
                         self.file_open = True
                         self.__send_rstp_describe(liste.get(self.uuid)['link'])
+                        liste.update_status(self.uuid,0)
+                        print("[FIRST PLAY][RTSP][" + self.ip + ":" + str(self.port) + "] Receive")
+                        print(liste.get(self.uuid))
 
                     else :
-                        if liste.get(self.uuid)['new_status'] != 0:
-                            print("ok")
+                        #change
+                        if liste.get(self.uuid)['status'] == 1 :
+                            print("[CHANGE][RTSP][" + self.ip + ":" + str(self.port) + "] Receive")
                             self.file.close()
                             self.file = open(liste.get(str(self.uuid))['link'], 'rb')
                             self.__send_rstp_describe(liste.get(self.uuid)['link'])
-                            liste.update_status(self.uuid)
+                            liste.update_status(self.uuid,0)
+                            self.is_pause = False
+
+                        #rplay
+                        if liste.get(self.uuid)['status'] == 2 :
+                            print("[REPLAY][RTSP][" + self.ip + ":" + str(self.port) + "] Receive")
+                            self.file.close()
+                            self.file = open(liste.get(str(self.uuid))['link'], 'rb')
+                            self.__send_rstp_describe(liste.get(self.uuid)['link'])
+                            liste.update_status(self.uuid,0)
+                            self.is_pause = False
+
+                        #un pause
+                        if liste.get(self.uuid)['status'] == 3 :
+                            print("[PLAY][RTSP][" + self.ip + ":" + str(self.port) + "] Receive")
+                            self.is_pause = False
+                            liste.update_status(self.uuid,0)
+
+                        #pause
+                        if liste.get(self.uuid)['status'] == 5 :
+                            print("[PAUSE][RTSP][" + self.ip + ":" + str(self.port) + "] Receive")
+                            self.is_pause = True
+                            liste.update_status(self.uuid,0)
 
                         else:
-                            data = self.file.read(self.framerate*self.nchannels)
-                            self.conn.send(data)
-                            liste.update_chunk(self.uuid)
+                            if self.is_pause:
+                                pass
+                            else:
+                                data = self.file.read(self.framerate*self.nchannels)
+                                self.conn.send(data)
+                                liste.update_chunk(self.uuid)
         except Exception as e:
             print(e)
             print("[+][RTSP][" + self.ip + ":" + str(self.port) + "] Disconnected")
