@@ -93,7 +93,6 @@ class RTPPoolServer(Thread):
                     else:
                         current = liste.get(uuid)
                         if current:
-                            print(link)
                             if current['link'] != link and current['status'] == 0:
                                 liste.set(uuid, {'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 1,
                                                  "state": False})
