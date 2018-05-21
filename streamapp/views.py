@@ -33,7 +33,9 @@ def unpause():
 def replay():
         check_uuid()
         path = request.form['path']
-        # todo implementation le server le fait a tester mardi
+        client = rtp.RTPClient("127.0.0.1", 7800)
+        client.send_replay(request.form['path'], str(session["user_id"]))
+
 
         return jsonify(status=200)
 

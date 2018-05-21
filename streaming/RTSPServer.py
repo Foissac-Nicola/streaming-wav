@@ -97,13 +97,20 @@ class RTPPoolServer(Thread):
                                 liste.set(uuid, {'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 1,
                                                  "state": False})
 
-                            if current['status'] == 0 and current['link'] == link and current['state'] == False:
-                                liste.set(uuid, {'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 2,
-                                                 "state": False})
-
                             if current['status'] == 0 and current['link'] == link and current['state'] == True:
                                 liste.set(uuid, {'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 3,
                                                  "state": False})
+
+                if data.startswith(b'REPLAY'):
+                    split = str(data).split(' ')
+                    uuid = split[4]
+                    link = split[1]
+                    commend = split[0]
+                    current = liste.get(uuid)
+                    if current:
+                        if current['link'] == link:
+                            liste.set(uuid, {'cmd': commend, 'link': link, 'bind': 0, 'chunk': 0, 'status': 2,
+                                         "state": False})
 
                 if data.startswith(b'PAUSE'):
                     split = str(data).split(' ')

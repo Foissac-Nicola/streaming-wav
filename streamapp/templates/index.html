@@ -8,9 +8,51 @@
 {% include 'search_form.html' %} {% include 'table_musics.html' %}
 
 <script>
-    function play(path) {
-        $.post("/play", { 'path': path }).done(function (data) {
+    function play(path, i) {
+        if( $("a[item=" + i + "]").attr('state')=='Stop'){
 
+            var list = $('a[item]').not($("a[item=" + i + "]")).not('a[state=Stop]')
+            $(list).each(function( index ) {
+                if($(this).attr('state') == 'Pause')
+                    $(this).attr('state','Stop').children("img").attr('src', '{{url_for('static', filename='images/play-button.png')}}')
+                    $(this).attr('onclick',"play("+$(this).attr('onclick').split('(')[1])
+                if($(this).attr('state') == 'Play')
+                    $(this).attr('state','Stop').children("img").attr('src', '{{url_for('static', filename='images/play-button.png')}}')
+                    $(this).attr('onclick',"play("+$(this).attr('onclick').split('(')[1])
+                if($(this).attr('state') == 'Replay')
+                    $(this).remove()
+            })
+
+            $("a[item=" + i + "]").attr('state', 'Play')
+            $("a[item=" + i + "]").attr('onclick', 'pause(\'' + path + '\',' + i + ')')
+            $("a[item=" + i + "][state=Play]").children("img").attr('src', '{{url_for('static', filename='images/pause-button.png')}}')
+            var balise =' <a href="#replay" item="'+i+'" onclick="replay(\'' + path +'\','+i+')" state="Replay">'
+            var next="<img src='{{url_for('static', filename='images/replay-button.png')}}' />";
+            $("a[item=" + i + "][state=Play]").parent().append(balise+next)
+        }else if ($("a[item=" + i + "]").attr('state')=='Pause') {
+            $("a[item=" + i + "][state=Pause]").attr('state', 'Play')
+            $("a[item=" + i + "][state=Play]").attr('onclick', 'pause(\'' + path + '\',' + i + ')')
+            $("a[item=" + i + "][state=Play]").children("img").attr('src', '{{url_for('static', filename='images/pause-button.png')}}')
+        }
+
+        $.post("/play", {'path': path}).done(function (data) {
+        });
+    }
+
+    function pause(path, i) {
+        $("a[item=" + i + "][state=Play]").attr('state', 'Pause')
+        $("a[item=" + i + "][state=Pause]").attr('onclick', 'play(\'' + path + '\',' + i + ')')
+        $("a[item=" + i + "][state=Pause]").children("img").attr('src', '{{url_for('static', filename='images/play-button.png')}}')
+        $.post("/pause", {'path': path}).done(function (data) {
+        });
+    }
+
+    function replay(path, i) {
+        console.log($("a[item=" + i + "]").attr('state'))
+            $("a[item=" + i + "][state=Play]").attr('state', 'Pause')
+            $("a[item=" + i + "][state=Pause]").attr('onclick', 'pause(\'' + path + '\',' + i + ')')
+            $("a[item=" + i + "][state=Pause]").children("img").attr('src', '{{url_for('static', filename='images/pause-button.png')}}')
+        $.post("/replay", {'path': path}).done(function (data) {
         });
     }
 
@@ -34,16 +76,16 @@
 
             if (results.length > 0) {
                 $('#noResult').hide();
-                var headers = [{ "title": "", "class": "class='col-md-1'" },
-                { "title": "Titre", "class": "class='col-md-6'" },
-                { "title": "Artiste(s)", "class": "class='col-md-5'" }];
+                var headers = [{"title": "", "class": "class='col-md-1'"},
+                    {"title": "Titre", "class": "class='col-md-6'"},
+                    {"title": "Artiste(s)", "class": "class='col-md-5'"}];
 
                 for (var i in headers) {
                     $("#resultHead tr").append($("<th " + headers[i].class + ">").text(headers[i].title));
                 }
 
                 $.each(results, function (i, item) {
-                    var preLogo = '<a href="#play" onclick="play(\'' + item.path + '\')">';
+                    var preLogo = '<a href="#play" item="' + i + '" onclick="play(\'' + item.path + '\',' + i + ')" state="Stop">';
                     var logo = "<img src='{{url_for('static', filename='images/play-button.png')}}' />";
                     var postLogo = "</a>";
                     $('<tr>').append(

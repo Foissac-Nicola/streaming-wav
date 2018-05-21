@@ -27,6 +27,12 @@ class RTPClient:
     def send_pause(self,path,token):
         self.__send_commend("PAUSE "+path+" RTP/1.0 200 "+token,"Pause music failed")
 
+    def send_replay(self,path,token):
+        self.__send_commend("REPLAY "+path+" RTP/1.0 200 "+token,"Play music failed")
+
     def send_play(self,path,token):
         self.__send_commend("PLAY "+path+" RTP/1.0 200 "+token,"Play music failed")
+
+    def send_quit(self,path,token):
+        self.__send_commend("QUIT "+path+" RTP/1.0 200 "+token,"Play music failed")
 
