@@ -2,7 +2,6 @@ import socket, sys,uuid
 from flask import (render_template, request, jsonify , session )
 from streamapp import app
 from streaming import RTPClient as rtp
-import time
 
 from helpers.sparqlHelper import SPARQLHelper
 
@@ -25,17 +24,7 @@ def pause():
 def unpause():
         check_uuid()
         path = request.form['path']
-        msg = str("PLAY " + "./wav/5Keer.wav" + " RTP/1.0 200 " + str(session["user_id"]))
-        print(msg)
-
-        m_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-        try:
-            m_socket.connect(("127.0.0.1", 7800))
-            m_socket.send(msg.encode("Utf8"))
-            m_socket.close()
-        except socket.error as error:
-            print("Play music failed - Error:", error)
+        # todo implementation le server le fait a tester mardi
 
         return jsonify(status=200)
 
@@ -43,17 +32,15 @@ def unpause():
 def replay():
         check_uuid()
         path = request.form['path']
-        msg = str("PLAY " + "./wav/5Keer.wav" + " RTP/1.0 200 " + str(session["user_id"]))
-        print(msg)
+        # todo implementation le server le fait a tester mardi
 
-        m_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        return jsonify(status=200)
 
-        try:
-            m_socket.connect(("127.0.0.1", 7800))
-            m_socket.send(msg.encode("Utf8"))
-            m_socket.close()
-        except socket.error as error:
-            print("Play music failed - Error:", error)
+@app.route('/disconect', methods=['POST'])
+def replay():
+        check_uuid()
+        path = request.form['path']
+        # todo implementation le server le fait a tester mardi
 
         return jsonify(status=200)
 

@@ -8,14 +8,17 @@ class RTPClient:
         self.__port = port
         self.__address = address
         self.__contex = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.__contex.connect((self.__address, self.__port))
+        try:
+            self.__contex.connect((self.__address, self.__port))
+            print("[+][RTP][" + self.__address + ":" + str(self.__port) + "] Connected to server")
+        except socket.error:
+            print("[x][RTP][" + self.__address + ":" + str(self.__port) + "] Connection Failed to server")
 
 
     def __send_commend(self,message,message_error):
         try:
-            print("[+][RTP][" + self.__address + ":" + str(self.__port) + "] Connected to server")
-            print("[COMMEND][RTP]",message)
             self.__contex.send(message.encode("Utf8"))
+            print("[COMMEND][RTP]",message)
             print("[-][RTP][" + self.__address + ":" + str(self.__port) + "] Disconnected to server")
         except socket.error as error:
             print(message_error+" - Error:", error)
