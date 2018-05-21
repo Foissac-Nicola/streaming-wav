@@ -36,8 +36,8 @@ def replay():
 
         return jsonify(status=200)
 
-@app.route('/disconect', methods=['POST'])
-def replay():
+@app.route('/disconnect', methods=['POST'])
+def disconnect():
         check_uuid()
         path = request.form['path']
         # todo implementation le server le fait a tester mardi
