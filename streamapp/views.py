@@ -2,21 +2,22 @@ import socket, sys,uuid
 from flask import (render_template, request, jsonify , session )
 from streamapp import app
 from streaming import RTPClient as rtp
-
 from helpers.sparqlHelper import SPARQLHelper
 
-client = rtp.RTPClient("127.0.0.1", 7800)
+
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 @app.route('/play', methods=['POST'])
 def play():
     check_uuid()
+    client = rtp.RTPClient("127.0.0.1", 7800)
     client.send_play(request.form['path'],str(session["user_id"]))
     return jsonify(status=200)
 
 @app.route('/pause', methods=['POST'])
 def pause():
         check_uuid()
+        client = rtp.RTPClient("127.0.0.1", 7800)
         client.send_pause(request.form['path'], str(session["user_id"]))
         return jsonify(status=200)
 
