@@ -11,7 +11,7 @@ from threading import Thread
 FORMAT = pyaudio.paInt16
 
 
-class RTPClient(Thread):
+class RTSPClient(Thread):
     def __init__(self, address, port):
         Thread.__init__(self)
         self.port = port
@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
 
 try:
-    thread = RTPClient(address,port)
+    thread = RTSPClient(address,port)
     thread.start()
     while 1:
         time.sleep(0.1)
