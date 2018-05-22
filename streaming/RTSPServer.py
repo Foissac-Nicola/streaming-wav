@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import socket
-import queue
 import sys
 import wave
 import time
@@ -11,16 +10,31 @@ from time import sleep
 
 
 class ThreadSafeDict:
+    """
+        This class define thread safe dict.
+        This use semaphore to lock memory access.
+    """
     def __init__(self) -> None:
         self.__dictionairy = {}
         self.__lock = Semaphore()
 
     def set(self, key, value):
+        """
+            This method set new value in the dict.
+        :param key: uuid
+        :param value: dict {'cmd': X, 'link': X, 'bind': X, 'chunk': X, 'status': X, "state": X})
+        :return: None
+        """
         self.__lock.acquire()
         self.__dictionairy[key] = value
         self.__lock.release()
 
     def get(self, key):
+        """
+            This method get value in dict
+        :param key: uuid
+        :return: value of uuid key.
+        """
         self.__lock.acquire()
         value = {}
         if key in self.__dictionairy:
@@ -29,6 +43,11 @@ class ThreadSafeDict:
         return value
 
     def try_bind(self, port):
+        """
+            This method try to bind somme client whit server.
+        :param port: socket connection port
+        :return: ret: true if bind otherwise false , uuid
+        """
         self.__lock.acquire()
         ret = False
         uuid = 0
@@ -41,18 +60,34 @@ class ThreadSafeDict:
         return ret, str(uuid)
 
     def update_chunk(self, key):
+        """
+            This method update chunk one by one of client
+        :param key: uuid
+        :return: None
+        """
         self.__lock.acquire()
         if key in self.__dictionairy:
             self.__dictionairy[key]['chunk'] = self.__dictionairy[key]['chunk'] + 1
         self.__lock.release()
 
     def update_status(self, key, value):
+        """
+            This method update status of client
+        :param key: uuid
+        :param value: new status
+        :return: None
+        """
         self.__lock.acquire()
         if key in self.__dictionairy:
             self.__dictionairy[key]['status'] = value
         self.__lock.release()
 
     def exist_key(self, key):
+        """
+            This method check if key exist
+        :param key: uuid
+        :return: false if no exist otherwise true
+        """
         self.__lock.acquire()
         ret = key in self.__dictionairy
         self.__lock.release()
