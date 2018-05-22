@@ -21,13 +21,6 @@ def pause():
         client.send_pause(request.form['path'], str(session["user_id"]))
         return jsonify(status=200)
 
-@app.route('/unpause', methods=['POST'])
-def unpause():
-        check_uuid()
-        path = request.form['path']
-        # todo implementation le server le fait a tester mardi
-
-        return jsonify(status=200)
 
 @app.route('/replay', methods=['POST'])
 def replay():
@@ -35,16 +28,6 @@ def replay():
         path = request.form['path']
         client = rtp.RTPClient("127.0.0.1", 7800)
         client.send_replay(request.form['path'], str(session["user_id"]))
-
-
-        return jsonify(status=200)
-
-@app.route('/disconnect', methods=['POST'])
-def disconnect():
-        check_uuid()
-        path = request.form['path']
-        # todo implementation le server le fait a tester mardi
-
         return jsonify(status=200)
 
 
