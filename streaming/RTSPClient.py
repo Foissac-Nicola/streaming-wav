@@ -78,7 +78,7 @@ class RTSPClient(Thread):
             self.audio.terminate()
 
         except Exception as err:
-            print("[-][RTP][" + self.address + ":" + str(self.port) + "] Fail To Connect")
+            print("[x][RTP][" + self.address + ":" + str(self.port) + "] Fail To Connect")
             self.audio.terminate()
             self.stop()
 

@@ -6,9 +6,17 @@ from xml.dom.minidom import parseString as parseDocumentXml
 
 
 class XMLHelper:
+    """
+        This class provide lot of method to find some rdf tag in xml file.
+    """
 
     @staticmethod
     def find_rating(document):
+        """
+            This method find rating tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("xmp:Rating")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue
@@ -16,6 +24,11 @@ class XMLHelper:
 
     @staticmethod
     def find_rights(document):
+        """
+            This method find rating tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("xmpRights:Marked")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue.lower()
@@ -23,6 +36,11 @@ class XMLHelper:
 
     @staticmethod
     def find_instrument(document):
+        """
+            This method find rating tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("xmpDM:instrument")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue.lower().split(", ")
@@ -30,6 +48,11 @@ class XMLHelper:
 
     @staticmethod
     def find_author(document):
+        """
+            This method find rating tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("xmpDM:artist")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue.lower()
@@ -37,6 +60,11 @@ class XMLHelper:
 
     @staticmethod
     def find_date(document):
+        """
+            This method find rating tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("xmp:MetadataDate")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue
@@ -45,6 +73,11 @@ class XMLHelper:
 
     @staticmethod
     def find_composer(document):
+        """
+            This method find rating tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("xmpDM:composer")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue.lower()
@@ -52,6 +85,11 @@ class XMLHelper:
 
     @staticmethod
     def find_genre(document):
+        """
+            This method find genre tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node value
+        """
         nodelist = document.getElementsByTagName("xmpDM:genre")
         if len(nodelist) > 0:
             return nodelist[0].firstChild.nodeValue.lower()
@@ -60,6 +98,11 @@ class XMLHelper:
 
     @staticmethod
     def find_title(document):
+        """
+            This method find title tag in document
+        :param document: xml(xmp) document
+        :return: None if not found otherwise node list
+        """
         nodelist = document.getElementsByTagName("dc:title")
         if len(nodelist) > 0:
             nodelist = nodelist[0].getElementsByTagName("rdf:Alt")
@@ -71,6 +114,11 @@ class XMLHelper:
 
     @staticmethod
     def find_description(document):
+        """
+            This method find description tag in document
+        :param document: xml(xmp) document
+        :return: Emtpy list if not found otherwise list
+        """
         nodelist = document.getElementsByTagName("dc:description")
         if len(nodelist) > 0:
             nodelist = nodelist[0].getElementsByTagName("rdf:Alt")
@@ -82,6 +130,11 @@ class XMLHelper:
 
     @staticmethod
     def find_subject(document):
+        """
+            This method find subject tag in document
+        :param document: xml(xmp) document
+        :return: Emtpy list if not found otherwise list
+        """
         ret = []
         nodelist = document.getElementsByTagName("dc:subject")
         if len(nodelist) > 0:
@@ -96,6 +149,11 @@ class XMLHelper:
 
     @staticmethod
     def parse_xml(xml):
+        """
+            This method parse all tag for rdf helper
+        :param xml:
+        :return: dict of tag
+        """
         ret = {}
         doc = parseDocumentXml(xml)
         ret['instrument'] = XMLHelper.find_instrument(doc)
