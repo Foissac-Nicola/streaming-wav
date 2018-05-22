@@ -5,12 +5,18 @@ from helpers.xmlHelper import XMLHelper as xml
 from helpers.rdfHelper import RDFHelper as rdf
 from helpers.xmpHelper import XMPHelper as xmp
 import os
+import sys
 
 class BDDBuilder :
 
-
     @staticmethod
     def create_entry(graph,path=None):
+        """
+            This method create entry for bdd
+        :param graph: rdf graph
+        :param path: path of wav file
+        :return: None
+        """
         xmp_data = xmp.extract_xmp(path)
         rdf_data =xml.parse_xml(xmp_data)
         rdf_data['path'] = path
@@ -18,8 +24,11 @@ class BDDBuilder :
 
     @staticmethod
     def make_bdd(path=None):
-        #pathDB = os.getcwd() + path
-        #Abs_path = os.path.dirname(pathDB)
+        """
+            This method parse all file and dir in dir path whit wav extension
+        :param path: dir of save bdd.xml file
+        :return: None
+        """
         graphe = rdf.create_rdf()
         for root, dirs, files in os.walk(path, topdown=False):
             for name in files:
@@ -27,14 +36,9 @@ class BDDBuilder :
                     BDDBuilder.create_entry(graphe,os.path.join(root, name))
         rdf.save_graph(graphe,"./bdd.xml")
 
-    @staticmethod
-    def test(path=None):
-        xmp_data = xmp.extract_xmp(path)
-        # print(xmp_data)
-        rdf_data =xml.parse_xml(xmp_data)
-        g=rdf.create_rdf()
-        rdf.add_sound(g,'',**rdf_data)
+if __name__ == '__main__':
 
-
-
-BDDBuilder.make_bdd(u".")
+    if len(sys.argv) >= 2:
+        BDDBuilder.make_bdd(sys.argv[1])
+    else:
+        BDDBuilder.make_bdd(u".")

@@ -55,10 +55,11 @@ def index():
     return render_template('./index.html')
 
 def check_uuid():
+    """
+    check is client has session
+    :return: None
+    """
     if 'link' not in session :
         session["user_id"] = uuid.uuid1()
         session['link'] = True
 
-
-#5fdc50fc-5b4a-11e8-8f53-44850057d794
-#8af9b504-5b4a-11e8-9383-44850057d794
